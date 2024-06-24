@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Demo]">
+  <parameter name="Browser" value="Chrome"/>
+  <test name="LoginTest_Sanity">
+    <classes>
+      <class name="com.Sanity.tests.LoginTest"/>
+    </classes>
+  </test> <!-- LoginTest_Sanity -->
+  <test name="LoginTest_Regression">
+    <classes>
+      <class name="com.Regression.tests.LoginTest"/>
+    </classes>
+  </test> <!-- LoginTest_Regression -->
+  <test name="LoginTest_FailCase">
+    <classes>
+      <class name="com.FailDemo.tests.LoginTest"/>
+    </classes>
+  </test> <!-- LoginTest_FailCase -->
+  <test name="LoginTest_Sanity(failed)">
+    <classes>
+      <class name="com.FailDemo.tests.LoginTest">
+        <methods>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.FailDemo.tests.LoginTest -->
+      <class name="com.Sanity.tests.LoginTest">
+        <methods>
+          <include name="userLogin"/>
+        </methods>
+      </class> <!-- com.Sanity.tests.LoginTest -->
+    </classes>
+  </test> <!-- LoginTest_Sanity(failed) -->
+  <test name="LoginTest_Regression(failed)">
+    <classes>
+      <class name="com.Regression.tests.LoginTest">
+        <methods>
+          <include name="userLogin"/>
+        </methods>
+      </class> <!-- com.Regression.tests.LoginTest -->
+      <class name="com.FailDemo.tests.LoginTest">
+        <methods>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.FailDemo.tests.LoginTest -->
+    </classes>
+  </test> <!-- LoginTest_Regression(failed) -->
+  <test name="LoginTest_FailCase(failed)">
+    <classes>
+      <class name="com.FailDemo.tests.LoginTest">
+        <methods>
+          <include name="userLogin"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.FailDemo.tests.LoginTest -->
+    </classes>
+  </test> <!-- LoginTest_FailCase(failed) -->
+</suite> <!-- Failed suite [Demo] -->

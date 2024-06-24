@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Demo">
+	<parameter name="Browser" value="Chrome" />
+
+	<test name="LoginTest_Sanity">
+		<classes>
+			<class name="com.Sanity.tests.LoginTest" />
+		</classes>
+	</test> <!-- Test -->
+	
+	<test name="LoginTest_Regression">
+		<classes>
+			<class name="com.Regression.tests.LoginTest" />
+		</classes>
+	</test> <!-- Test -->
+	
+	<test name="LoginTest_FailCase">
+		<classes>
+			<class name="com.FailDemo.tests.LoginTest" />
+		</classes>
+	</test> <!-- Test -->
+	
+</suite> <!-- Suite -->
