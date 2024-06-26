@@ -95,6 +95,7 @@ public class LoginTest extends Baseclass {
 					driver);
 
 		} catch (AssertionError userLogin) {
+			
 
 			node.log(Status.INFO, "Reason of assertion failed: " + userLogin);
 
@@ -138,6 +139,9 @@ public class LoginTest extends Baseclass {
 			extent.flush();
 
 			// TODO: handle exception
+		}
+		finally {
+			System.out.println("Test_commit");
 		}
 
 	}

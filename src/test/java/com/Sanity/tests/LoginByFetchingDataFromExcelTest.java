@@ -94,27 +94,27 @@ public class LoginByFetchingDataFromExcelTest extends Baseclass {
 			Assert.fail();
 			extent.flush();
 		}
-
-		catch (Exception userLogin) {
-			node.log(
-					Status.INFO,
-					"EXCEPTION BLOCK 2 : FAIL : Some Exception Error Caught In userLogin test in LoginTest class");
-
-			// Take the failed case screenshot
-			String screenpath = IScreenAction.captureScreenShot_FailedCase(
-					driver, "UserLogin_Fail");
-			node.log(
-					Status.FAIL,
-					"Some Exception Error"
-							+ extenttest.addScreenCaptureFromPath(screenpath));
-
-			userLogin.printStackTrace();
-			node.fail(userLogin);
-			Assert.fail();
-			extent.flush();
-
-			// TODO: handle exception
-		}
+//
+//		catch (Exception userLogin) {
+//			node.log(
+//					Status.INFO,
+//					"EXCEPTION BLOCK 2 : FAIL : Some Exception Error Caught In userLogin test in LoginTest class");
+//
+//			// Take the failed case screenshot
+//			String screenpath = IScreenAction.captureScreenShot_FailedCase(
+//					driver, "UserLogin_Fail");
+//			node.log(
+//					Status.FAIL,
+//					"Some Exception Error"
+//							+ extenttest.addScreenCaptureFromPath(screenpath));
+//
+//			userLogin.printStackTrace();
+//			node.fail(userLogin);
+//			Assert.fail();
+//			extent.flush();
+//
+//			// TODO: handle exception
+//		}
 
 	}
 
